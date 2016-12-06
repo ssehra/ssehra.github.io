@@ -3,6 +3,19 @@ Prototype Lab Flow
 Projects blog: http://ssehra.github.io
 
 
+Table of Contents
+=================
+1. [Introduction](#introduction)
+2. [Build Budget](#build-budget)
+3. [Time Commitment](#time-commitment)
+4. [Mechanical Assembly](#mechanical-assembly)
+5. [PCB Soldering](#pcb-soldering)
+6. [Unit Testing](#unit-testing)
+7. [Power Up](#power-up)
+8. [Production Testing](#production-testing)
+9. [Conclusion](#conclusion)
+
+
 Introduction
 ============
 This document will provide you with all the necessary information required to build your very own "Prototype Lab Flow" project.
@@ -68,4 +81,29 @@ If you already have acquired all the parts and got the PCB printed, I beleive th
 
 Mechanical Assembly
 ===================
+abc
 
+
+PCB Soldering
+=============
+abc
+
+
+Unit Testing
+============
+abc
+
+
+Power Up
+========
+abc
+
+
+Production Testing
+============
+abc
+
+
+Conclusion
+==========
+abc
