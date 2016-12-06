@@ -6,7 +6,10 @@ Projects blog: http://ssehra.github.io
 Table of Contents
 =================
 1. [Introduction](#introduction)
+  - [What is the Prototype Lab Flow Project?](#what-is-the-protoype-lab-flow-project)
+  - [Why is is useful?](#why-is-is-useful)
 2. [Build Budget](#build-budget)
+  - [A breakdown of the item needed to build this project](#heres-a-breakdown-of-the-item-needed-to-build-this-project)
 3. [Time Commitment](#time-commitment)
 4. [Mechanical Assembly](#mechanical-assembly)
 5. [PCB Soldering](#pcb-soldering)
