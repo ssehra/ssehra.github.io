@@ -59,5 +59,13 @@ My final build cost totals to about approximately $200 (That's including taxes a
 Time Commitment
 ===============
 
-abc
+Time is a resource arguably as valuable as money. And this project demands plenty of it. 
+
+I had almost 15 weeks to work this project however with these detailed instructions I will be cutting that time significantly for anyone wanting to recreate this project. Majority of my time was spent in implementing the QR scanning functionality and blinking the L.E.D. for feedback. It was my first time soldering and I was able to solder the PCB in less than an hour. 
+
+If you already have acquired all the parts and got the PCB printed, I beleive this project can be completed in a day. That's if you copy paste the all the code and it runs flawlessly without any errors.
+
+
+Mechanical Assembly
+===================
 
