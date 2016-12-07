@@ -10,7 +10,7 @@ Table of Contents
   - [Why is is useful?](#why-is-is-useful)
 2. [Build Budget](#build-budget)
   - [A breakdown of the core items needed to build this project](#heres-a-breakdown-of-the-item-needed-to-build-this-project)
-  - [A Breakdown of PCB components for this project](#the-list-of-pcb-components-needed-to-build-the-pcb)
+  - [A list components required for the PCB](#the-list-of-pcb-components-needed-to-build-the-pcb)
 3. [Time Commitment](#time-commitment)
 4. [Mechanical Assembly](#mechanical-assembly)
 5. [PCB Soldering](#pcb-soldering)
