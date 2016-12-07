@@ -17,8 +17,11 @@ Table of Contents
   - [My Completed PCB](#ariel-view-of-my-completed-pcb)
 5. [Mechanical Assembly & Power Up](#mechanical-assembly--power-up)
 6. [Unit Testing](#unit-testing)
-7. [Production Testing](#production-testing)
-8. [Conclusion](#conclusion)
+  - [Webcam funcitonality](#webcam-funcitonality-testing)
+  - [PCB funcitonality testing](#pcb-funcitonality-testing)
+7. [Scanning QR Codes](#scanning-qr-codes)
+8. [Production Testing](#production-testing)
+9. [Conclusion](#conclusion)
 
 
 Introduction
@@ -137,10 +140,10 @@ That's it with the assembly you're ready to scroll down.
 
 Unit Testing
 ============
-#### Webcam funcitonality
+#### Webcam funcitonality testing
 For testing, start by installing the fswebcam library by typing **sudo apt-get install fswebcam**. Then type fswebcam followed by a filename with .jpg extention. For example, **fswebcam image.jpg**. This will snap a picture and save it the current directory with the filename image.jpg. If this works, that means the USB Webcam functions properly.
 
-#### PCB functionality
+#### PCB funcitonality testing
 To test the PCB, run the the traffic2B.c (source code available **-->** [here](/Build Log Files/traffic2B.c)) with the following steps.
 
 1. Type **sudo apt-get install wiringPi** on the terminal to the the Pi Wiring Library
@@ -149,10 +152,16 @@ To test the PCB, run the the traffic2B.c (source code available **-->** [here](/
 
 This should start blinking the L.E.D's in a traffic light pattern for an endless loop. Use Ctrl+C to exit the program. If this works, this means the PCB is ready to used.
 
+You are now ready to add the code to implement the QR Code scanning.
+
+
+Scanning QR Codes 
+=================
+abc
 
 
 Production Testing
-============
+==================
 abc
 
 
