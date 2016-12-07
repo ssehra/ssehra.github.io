@@ -112,6 +112,10 @@ Now that you have these files, you'll need eclipse to open them. Eclipse can be 
 |---|---|---|---|---|---|---|
 | [HSHV4-student version.GTL](/Build Log Files/HSHV4-student version.GTL) | [HSHV4-student version.GBL](/Build Log Files/HSHV4-student version.GBL) | [HSHV4-student version.GTS](/Build Log Files/HSHV4-student version.GTS) | [HSHV4-student version.GBS](/Build Log Files/HSHV4-student version.GBS) | [HSHV4-student version.GTO](/Build Log Files/HSHV4-student version.GTO) | [HSHV4-student version.GBO](/Build Log Files/HSHV4-student version.GBO) | [HSHV4-student version.TXT](/Build Log Files/HSHV4-student version.TXT) |
 
+All of these files are used to instruct the machine with the coordinates and to engrave the PCB. It takes about 4-5 hours for the machine to print it. After it's done, wash with water *(preferably deionized water)* and wipe it a piece or cloth to avoid leaving water marks (I recommend using a micro-fiber cloth) and wait for it to dry completely. After that's done you can sand the PCB a bit just to make it shinier. If you do sand it you have the repeat the washing process again.
+
+Now the PCB is ready to soldered. However safety comes first. Make sure to wear safety glasses and and dress appropriately for a lab/workplace environmnet. Now Use the schmatic as the guide and solder each of the components to their respective places and making sure that the excess solder is not causing a short.
+
 
 ![Alt text](/Build Log Files/PCB.png?raw=true "My PCB")
 
