@@ -6,7 +6,7 @@ Projects blog: http://ssehra.github.io
 Table of Contents
 =================
 1. [Introduction](#introduction)
-  - [What is the Prototype Lab Flow Project?](#what-is-the-protoype-lab-flow-project)
+  - [What is the Project?](#what-is-the-protoype-lab-flow-project)
   - [Why is is useful?](#why-is-is-useful)
 2. [Build Budget](#build-budget)
   - [A breakdown of the item needed to build this project](#heres-a-breakdown-of-the-item-needed-to-build-this-project)
@@ -47,8 +47,23 @@ Before we start building something, we need to plan a budget. A budget will be e
 4. A Case for Raspberry Pi 
 5. HDMI Cable
 6. A MicroSD Card (8GB or higher)
-7. Keyboard/Mouse Combo (USB or bluetooth)
-8. A monitor
+7. ~~Keyboard/Mouse Combo (USB or bluetooth)~~
+8. ~~A monitor~~
+
+##### The list of PCB components needed to build the PCB
+- 2x20 Header Female (Qty: 1) $3.73
+- 100nF Capacitor (Qty: 4) $5.80
+- 10uF Capacitor (Qty: 1) $1.45
+- 1kΩ Resistor (Qty: 1) $0.15
+- 3.9kΩ Resistor (Qty: 4) $2.40
+- 4.7kΩ Resistor (Qty: 3) $1.35
+- 3mm LED (Qty: 1)  $0.61
+- N-Channel Logic Level MOSFET (Qty: 1) $0.99
+- ~~Real Time clock Battery (Qty: 1) $0.48~~
+- ~~I2C Real Time Clock (Qty: 1) $11.95~~
+- ~~8-bit I2C ADC&DAC with sensors (Qty: 1) $8.50~~
+- ~~1x4 Header Female (Qty: 2)  $1.70~~
+- ~~1x5 Header Female (Qty: 2) $3.40~~
 
 Let's start with the core of the project, a Raspberry Pi. The Raspberry Pi alone costs around $60-70 online if you're lucky enough find one. I highly recommend opting in for the Raspberry Pi starter kit instead as it comes with all the necessary items like a microSD card, an AC adapter and a case (as well as other stuff like a microSD reader). It's available for about $20-30 extra.
 
@@ -56,25 +71,25 @@ A case is highly recommended as the raspberry pi is relatively fragile microcomp
 
 Moving on, a webcam will be required to scan QR codes. Any USB webcam will do fine. So no need a spend the extra bucks for a high definition webcam. An average webcam will cost between $20 and $35. Or even cheaper if you find a used/refurbished one.
 
-Finally, there is cost associated with the fabricating of a PCB (Printed Circuit board). The Prototype Lab at Humber College charges about $40 to print a PCB. As a Humber student, it's included as part of my tuition fees.
+Finally, there is cost associated with the fabricating of a PCB (Printed Circuit board) as well it's components. The Prototype Lab at Humber College charges about $40 to print a PCB. The components I have on my PCB cost about $42.52. However, I do a have a bunch of extra components like sensors and headers that you don't need. This is why is I have them corssed out on the list. Morever, this brings the cost down from $42.52 to $16.49. The actual cost might still be higher since not all components are sold in the quantitiy of single units. As a Humber student, all of this is covered as part of my tuition fees. 
 
-Altogether I spent about $100 on the Raspberry Pi starter kit from Amazon. If you buy an older Raspberry Pi, you have to spend extra on a USB wifi receiver or use the ethernet instead. I used my old webcam which I bought for about $35-$40 at the time. And I didn't have to pay extra for the PCB since I'm a Humber student. I'm not including a monitor, and a keyboard and a mouse since almost eveybody owns a set of them.
+Altogether I spent about $100 on the Raspberry Pi starter kit from Amazon. If you buy an older Raspberry Pi, you have to spend extra on a USB wifi receiver or use the ethernet instead. I used my old webcam which I bought for about $35-$40 at the time. And I didn't have to pay extra for the PCB since I'm a Humber student as well as the PCB components. I'm not including a monitor, and a keyboard and a mouse since almost eveybody owns at least one of each. If not then you can buy any monitor with an HDMI and any USB or bluetooth keyboard/mouse combo.
 
 Here's a table thats shows all the items I bought and how much I paid for them. Note all prices are in CAD. I'm also including the PCB fabricating cost to create a reference for you to compare total costs.
 
 | Item                               | Cost   |
 |------------------------------------|--------|
 | Rasberry Pi 3 Starter Kit          | $99.99 |
-| Microsoft LifeCam VX-1000          | $35.99 |
+| Microsoft LifeCam VX-1000          | $34.99 |
 | PCB Fabrication Cost               | $40    |
-|**Total**                           | **$198.85**|
+| Reqruired components for PCB       | $42.52 |
+|**Total**                           | **$245.78**|
 
 My final build cost totals to about approximately $200 (That's including taxes and other expenses like shipping and handling).
 
 
 Time Commitment
 ===============
-
 Time is a resource arguably as valuable as money. And this project demands plenty of it. 
 
 I had almost 15 weeks to work this project however with these detailed instructions I will be cutting that time significantly for anyone wanting to recreate this project. Majority of my time was spent in implementing the QR scanning functionality and blinking the L.E.D. for feedback. It was my first time soldering and I was able to solder the PCB in less than an hour. 
@@ -82,14 +97,14 @@ I had almost 15 weeks to work this project however with these detailed instructi
 If you already have acquired all the parts and got the PCB printed, I beleive this project can be completed in a day. That's if you copy paste the all the code and it runs flawlessly without any errors.
 
 
-Mechanical Assembly
-===================
-abc
-
-
 PCB Soldering
 =============
-abc
+Let's start with the PCB first. 
+
+
+Mechanical Assembly
+===================
+by Nowyou have acquired all the parts you are ready to start doing mechanical assembly. It's extremely easy for this this project. 
 
 
 Unit Testing
