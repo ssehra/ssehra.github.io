@@ -137,8 +137,16 @@ That's it with the assembly you're ready to scroll down.
 
 Unit Testing
 ============
+#### Webcam funcitonality
 For testing, start by installing the fswebcam library by typing **sudo apt-get install fswebcam**. Then type fswebcam followed by a filename with .jpg extention. For example, **fswebcam image.jpg**. This will snap a picture and save it the current directory with the filename image.jpg. If this works, that means the USB Webcam functions properly.
 
+#### PCB functionality
+To test the PCB, run the the traffic2B.c (source code available **-->** [here](/Build Log Files/traffic2B.c)) with the following steps.
+1. Type **sudo apt-get install wiringPi** on the terminal to the the Pi Wiring Library
+2. Compile the file using **gcc -Wall -o traffic2B traffic2B.c -lwiringPi** (this creates an execuatalbe object called traffic2B)
+3. Run the file using **sudo ./traffic2B**
+
+This should start blinking the L.E.D's in a traffic light pattern for an endless loop. Use Ctrl+C to exit the program. If this works, this means the PCB is ready to used.
 
 
 
