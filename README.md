@@ -15,11 +15,10 @@ Table of Contents
 4. [PCB Soldering](#pcb-soldering)
   - [Schematic for the PCB](#schematic-for-the-pcb)
   - [My Completed PCB](#ariel-view-of-my-completed-pcb)
-5. [Mechanical Assembly](#mechanical-assembly)
+5. [Mechanical Assembly & Power Up](#mechanical-assembly--power-up)
 6. [Unit Testing](#unit-testing)
-7. [Power Up](#power-up)
-8. [Production Testing](#production-testing)
-9. [Conclusion](#conclusion)
+7. [Production Testing](#production-testing)
+8. [Conclusion](#conclusion)
 
 
 Introduction
