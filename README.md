@@ -58,7 +58,7 @@ Before we start building something, we need to plan a budget. A budget will be e
 - 1kΩ Resistor (Qty: 1) $0.15
 - 3.9kΩ Resistor (Qty: 4) $2.40
 - 4.7kΩ Resistor (Qty: 3) $1.35
-- 3mm LED (Qty: 1)  $0.61
+- 3mm LED (Qty: 1)  $0.61 
 - N-Channel Logic Level MOSFET (Qty: 1) $0.99
 - ~~Real Time clock Battery (Qty: 1) $0.48~~
 - ~~I2C Real Time Clock (Qty: 1) $11.95~~
@@ -118,7 +118,7 @@ Now the PCB is ready to soldered. However safety comes first. Make sure to wear 
 
 ![Alt text](/Build Log Files/PCB.png?raw=true "My PCB")
 
-*An ariel view of my PCB*
+   *Ariel view of my PCB*
 
 
 Unit Testing
