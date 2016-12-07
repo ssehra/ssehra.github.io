@@ -106,8 +106,7 @@ Time to start building the PCB! However you build something, you must design it 
 |---|---|
 | [HSHV4-student version.brd](/Build Log Files/HSHV4-student version.brd) | [HSHV4-student version.sch](/Build Log Files/HSHV4-student version.sch) |
 
-Now that you have these files, you'll need eclipse to open them. Eclipse can be downloaded at https://www.eclipse.org/downloads/
-After installing Eclipse, edit the name in the files to your own. After you finish editing it go ahead and follow the instructions here https://learn.sparkfun.com/tutorials/using-eagle-board-layout/generating-gerbers to generate the following files.
+Now that you have these files, you'll need eclipse to open them. Eclipse can be downloaded  **-->** [here](https://www.eclipse.org/downloads/). After installing Eclipse, edit the name in the files to your own. After you finish editing, go ahead and follow the instructions **-->** [here](https://learn.sparkfun.com/tutorials/using-eagle-board-layout/generating-gerbers) to generate the following files.
 
 | Top Copper (.GTL) | Bottom Copper (.GBL) | Top Soldermask (.GTS) | Bottom Soldermask (.GBS) | Top Silkscreen (.GTO) | Bottom Silkscreen (.GBO) | Drill File (.TXT) |
 |---|---|---|---|---|---|---|
