@@ -14,8 +14,8 @@ Table of Contents
 3. [Time Commitment](#time-commitment)
 4. [PCB Soldering](#pcb-soldering)
   - [My Completed PCB](#ariel-view-of-my-completed-pcb)
-5. [Unit Testing](#unit-testing)
-6. [Mechanical Assembly](#mechanical-assembly)
+5. [Mechanical Assembly](#mechanical-assembly)
+6. [Unit Testing](#unit-testing)
 7. [Power Up](#power-up)
 8. [Production Testing](#production-testing)
 9. [Conclusion](#conclusion)
@@ -115,21 +115,26 @@ Now that you have these files, you'll need eclipse to open them. Eclipse can be 
 
 All of these files are used to instruct the machine with the coordinates and to engrave the PCB. It takes about 4-5 hours for the machine to print it. After it's done, wash with water *(preferably deionized water)* and wipe it a piece or cloth to avoid leaving water marks (I recommend using a micro-fiber cloth) and wait for it to dry completely. After that's done you can sand the PCB a bit just to make it shinier. If you do sand it you have the repeat the washing process again.
 
-Now the PCB is ready to soldered. However safety comes first. Make sure to wear safety glasses and and dress appropriately for a lab/workplace environmnet. Now Use the schmatic as the guide and solder each of the components to their respective places and making sure that the excess solder is not causing a short.
+Now the PCB is ready to soldered. However safety comes first. Make sure to wear safety glasses and and dress appropriately for a lab/workplace environmnet. Now Use the schmatic as the guide and solder each of the components to their respective places and making sure that the excess solder is not causing a short. Now inspect each soldering carefully again use a voltmeter to test for continuity. If all goes well you are ready to move on to the next chapter.
 
 #### *Ariel view of my completed PCB*
 ![Alt text](/Build Log Files/PCB.png?raw=true "My PCB")
 
 
-Unit Testing
-============
-abc
-
-
 Mechanical Assembly
 ===================
-by Nowyou have acquired all the parts you are ready to start doing mechanical assembly. It's extremely easy for this this project. 
+By now, you have acquired all the parts you are ready to start doing mechanical assembly. It's extremely easy from here onwards since this guide a shortchut to the finishline. 
 
+You should now have the following: a Raspberry Pi, a USB Webcam, a MicroUSB power source and A MicroSD Card (8GB or higher). The starter kit's MicroSD card comes with pre-loaded Raspbian.iso so all you have to do is install it. If it doens't then it can downloaded from the Raspberry Pi website and copied on the MicroSD via a card reader (also included in the starter kit). Insert the flash card into Raspberry Pi.
+
+Begin by connecting power, HDMI and a keyboard and mouse and the USB Webcam to the Raspberry Pi. Also connect your PCB to  the Raspberry Pi. After it boots to the desktop, use **sudo apt-get update** on the commandline terminal to update the Raspbian to the latest version. This use **sudo apt-get dist-upgrade** to upgrade all the installed packages. These commands require internet (ethernet or wifi) to download the updates.
+
+That's it with the assembly you're ready to scroll down.
+
+
+Unit Testing
+============
+For testing, start by visually inspecting 
 
 
 Power Up
