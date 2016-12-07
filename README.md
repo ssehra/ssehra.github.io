@@ -5,19 +5,19 @@ Projects blog: http://ssehra.github.io
 
 Table of Contents
 =================
-#### 1. [Introduction](#introduction)
+1. [Introduction](#introduction)
   - [What is the Project?](#what-is-the-protoype-lab-flow-project)
   - [Why is is useful?](#why-is-is-useful)
-#### 2. [Build Budget](#build-budget)
+2. [Build Budget](#build-budget)
   - [A breakdown of the core items needed to build this project](#heres-a-breakdown-of-the-item-needed-to-build-this-project)
   - [A list components required for the PCB](#the-list-of-pcb-components-needed-to-build-the-pcb)
-#### 3. [Time Commitment](#time-commitment)
-#### 4. [PCB Soldering](#pcb-soldering)
-#### 5. [Unit Testing](#unit-testing)
-#### 6. [Mechanical Assembly](#mechanical-assembly)
-#### 7. [Power Up](#power-up)
-#### 8. [Production Testing](#production-testing)
-#### 9. [Conclusion](#conclusion)
+3. [Time Commitment](#time-commitment)
+4. [PCB Soldering](#pcb-soldering)
+5. [Unit Testing](#unit-testing)
+6. [Mechanical Assembly](#mechanical-assembly)
+7. [Power Up](#power-up)
+8. [Production Testing](#production-testing)
+9. [Conclusion](#conclusion)
 
 
 Introduction
