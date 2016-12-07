@@ -12,9 +12,9 @@ Table of Contents
   - [A breakdown of the core items needed to build this project](#heres-a-breakdown-of-the-item-needed-to-build-this-project)
   - [A list components required for the PCB](#the-list-of-pcb-components-needed-to-build-the-pcb)
 3. [Time Commitment](#time-commitment)
-4. [Mechanical Assembly](#mechanical-assembly)
-5. [PCB Soldering](#pcb-soldering)
-6. [Unit Testing](#unit-testing)
+4. [PCB Soldering](#pcb-soldering)
+5. [Unit Testing](#unit-testing)
+6. [Mechanical Assembly](#mechanical-assembly)
 7. [Power Up](#power-up)
 8. [Production Testing](#production-testing)
 9. [Conclusion](#conclusion)
@@ -117,17 +117,19 @@ All of these files are used to instruct the machine with the coordinates and to 
 Now the PCB is ready to soldered. However safety comes first. Make sure to wear safety glasses and and dress appropriately for a lab/workplace environmnet. Now Use the schmatic as the guide and solder each of the components to their respective places and making sure that the excess solder is not causing a short.
 
 ![Alt text](/Build Log Files/PCB.png?raw=true "My PCB")
+
 *An ariel view of my PCB*
+
+
+Unit Testing
+============
+abc
 
 
 Mechanical Assembly
 ===================
 by Nowyou have acquired all the parts you are ready to start doing mechanical assembly. It's extremely easy for this this project. 
 
-
-Unit Testing
-============
-abc
 
 
 Power Up
