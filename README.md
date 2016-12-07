@@ -24,10 +24,10 @@ Introduction
 ============
 This document will provide you with all the necessary information required to build your very own "Prototype Lab Flow" project.
 
-##### _What is the Protoype Lab Flow project?_
+#### _What is the Protoype Lab Flow project?_
 Well in simple terms, this project is a realtime database that allows the user to add/remove items into the database by simply scanning QR Codes.
 
-##### _Why is is useful?_
+#### _Why is is useful?_
 This project replaces the current item sign-out system used at the Humber Protoype Lab as well as the Humber Parts Crib. The current system requires a student to fill out a form and and lend their Humber ID Card in order to borrow items. This system is a slower process because students have to wait in queues just a fill out a form.  This project makes this system more efficient by allowing the adminstrator to simply scan QR Codes instead of waiting for the students to fill out thier forms.
 
 If you are still on how the project will work or what will it do the systems diagram below should be helpful.
@@ -41,7 +41,7 @@ Build Budget
 ============
 Before we start building something, we need to plan a budget. A budget will be especially helpful in managing the financial costs related to our build. 
 
-##### Here's a breakdown of the item needed to build this project.
+#### Here's a breakdown of the item needed to build this project.
 1. A Raspberry Pi
 2. USB Webcam
 3. A MicroUSB AC adapter
@@ -51,7 +51,7 @@ Before we start building something, we need to plan a budget. A budget will be e
 7. ~~Keyboard/Mouse Combo (USB or bluetooth)~~
 8. ~~A monitor~~
 
-##### The list of PCB components needed to build the PCB
+#### The list of PCB components needed to build the PCB
 - 2x20 Header Female (Qty: 1) $3.73
 - 100nF Capacitor (Qty: 4) $5.80
 - 10uF Capacitor (Qty: 1) $1.45
@@ -101,6 +101,8 @@ If you already have acquired all the parts and got the PCB printed, I beleive th
 PCB Soldering
 =============
 Let's start with the PCB first. 
+
+![Alt text](/PCB.jpeg?raw=true "My PCB")
 
 
 Mechanical Assembly
