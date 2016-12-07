@@ -13,6 +13,7 @@ Table of Contents
   - [A list components required for the PCB](#the-list-of-pcb-components-needed-to-build-the-pcb)
 3. [Time Commitment](#time-commitment)
 4. [PCB Soldering](#pcb-soldering)
+  - [My Completed PCB](#ariel-view-of-my-completed-pcb)
 5. [Unit Testing](#unit-testing)
 6. [Mechanical Assembly](#mechanical-assembly)
 7. [Power Up](#power-up)
