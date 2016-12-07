@@ -142,6 +142,7 @@ For testing, start by installing the fswebcam library by typing **sudo apt-get i
 
 #### PCB functionality
 To test the PCB, run the the traffic2B.c (source code available **-->** [here](/Build Log Files/traffic2B.c)) with the following steps.
+
 1. Type **sudo apt-get install wiringPi** on the terminal to the the Pi Wiring Library
 2. Compile the file using **gcc -Wall -o traffic2B traffic2B.c -lwiringPi** (this creates an execuatalbe object called traffic2B)
 3. Run the file using **sudo ./traffic2B**
