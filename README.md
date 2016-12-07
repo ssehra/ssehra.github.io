@@ -102,7 +102,7 @@ PCB Soldering
 =============
 Let's start with the PCB first. 
 
-![Alt text](/PCB.jpeg?raw=true "My PCB")
+![Alt text](/PCB.png?raw=true "My PCB")
 
 
 Mechanical Assembly
