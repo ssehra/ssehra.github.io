@@ -100,7 +100,11 @@ If you already have acquired all the parts and got the PCB printed, I beleive th
 
 PCB Soldering
 =============
-Time to start building the PCB! however to build something you need to design it first. That's where ** [this file](/Build Log Files/HSHV4-student version.brd) ** and ** [this file](/Build Log Files/HSHV4-student version.sch) ** comes in handy.
+Time to start building the PCB! however to build something you need to design it first. That's where these files come in handy.
+
+| Board File | Schematic File |
+|---|---|
+| [HSHV4-student version.brd](/Build Log Files/HSHV4-student version.brd) | [HSHV4-student version.sch](/Build Log Files/HSHV4-student version.sch) |
 
 ![Alt text](/Build Log Files/PCB.png?raw=true "My PCB")
 
