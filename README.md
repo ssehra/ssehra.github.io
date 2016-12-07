@@ -116,9 +116,8 @@ All of these files are used to instruct the machine with the coordinates and to 
 
 Now the PCB is ready to soldered. However safety comes first. Make sure to wear safety glasses and and dress appropriately for a lab/workplace environmnet. Now Use the schmatic as the guide and solder each of the components to their respective places and making sure that the excess solder is not causing a short.
 
+#### *Ariel view of my completed PCB*
 ![Alt text](/Build Log Files/PCB.png?raw=true "My PCB")
-
-   *Ariel view of my PCB*
 
 
 Unit Testing
