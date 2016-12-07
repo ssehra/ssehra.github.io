@@ -107,7 +107,7 @@ Time to start building the PCB! However you build something, you must design it 
 |---|---|
 | [HSHV4-student version.brd](/Build Log Files/HSHV4-student version.brd) | [HSHV4-student version.sch](/Build Log Files/HSHV4-student version.sch) |
 
-Now that you have these files, you'll need eclipse to open them. Eclipse can be downloaded  **-->** [here](https://www.eclipse.org/downloads/). After installing Eclipse, edit the name in the files to your own. After you finish editing, go ahead and follow the instructions **-->** [here](https://learn.sparkfun.com/tutorials/using-eagle-board-layout/generating-gerbers) to generate the following files.
+Now that you have these files, you'll need eagle to open them. Eagle can be downloaded  **-->** [here](https://cadsoft.io/). After installing Eagle, edit the name in the files to your own. After you finish editing, go ahead and follow the instructions **-->** [here](https://learn.sparkfun.com/tutorials/using-eagle-board-layout/generating-gerbers) to generate the following files.
 
 | Top Copper (.GTL) | Bottom Copper (.GBL) | Top Soldermask (.GTS) | Bottom Soldermask (.GBS) | Top Silkscreen (.GTO) | Bottom Silkscreen (.GBO) | Drill File (.TXT) |
 |---|---|---|---|---|---|---|
@@ -121,25 +121,22 @@ Now the PCB is ready to soldered. However safety comes first. Make sure to wear 
 ![Alt text](/Build Log Files/PCB.png?raw=true "My PCB")
 
 
-Mechanical Assembly
-===================
+Mechanical Assembly & Power Up
+==============================
 By now, you have acquired all the parts you are ready to start doing mechanical assembly. It's extremely easy from here onwards since this guide a shortchut to the finishline. 
 
 You should now have the following: a Raspberry Pi, a USB Webcam, a MicroUSB power source and A MicroSD Card (8GB or higher). The starter kit's MicroSD card comes with pre-loaded Raspbian.iso so all you have to do is install it. If it doens't then it can downloaded from the Raspberry Pi website and copied on the MicroSD via a card reader (also included in the starter kit). Insert the flash card into Raspberry Pi.
 
-Begin by connecting power, HDMI and a keyboard and mouse and the USB Webcam to the Raspberry Pi. Also connect your PCB to  the Raspberry Pi. After it boots to the desktop, use **sudo apt-get update** on the commandline terminal to update the Raspbian to the latest version. This use **sudo apt-get dist-upgrade** to upgrade all the installed packages. These commands require internet (ethernet or wifi) to download the updates.
+Begin by connecting power, HDMI and a keyboard and mouse and the USB Webcam to the Raspberry Pi. Also connect your PCB to  the Raspberry Pi. After it boots to the desktop, use **sudo apt-get update** on the commandline terminal to update the Raspbian to the latest version. Then use **sudo apt-get dist-upgrade** to upgrade all the installed packages. These commands require internet (ethernet or wifi) to download the updates.
 
 That's it with the assembly you're ready to scroll down.
 
 
 Unit Testing
 ============
-For testing, start by visually inspecting 
+For testing, start by installing the fswebcam library by typing **sudo apt-get install fswebcam**. Then type fswebcam followed by a filename with .jpg extention. For example, **fswebcam image.jpg**. This will snap a picture and save it the current directory with the filename image.jpg. If this works, that means the USB Webcam functions properly.
 
 
-Power Up
-========
-abc
 
 
 Production Testing
