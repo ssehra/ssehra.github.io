@@ -159,11 +159,41 @@ Scanning QR Codes
 =================
 You can generate your own QR Codes ---> [here](http://www.qr-code-generator.com/), or any other website of your choosing. If you are using a service thats allows you to set the pixel count of the QR code, I recommend setting it to the minimum as it's faster and can be handled by webcams with lower resolution. 
 
+#### Now we install the zbar library to scan QR codes. Follow these step below:
+1. Type **sudo apt-get install zbar-tools** on the terminal
+2. Use **ls /dev/video*/** to find your video source
+3. Test by scanning a QR code by typing **zbarcam /dev/video#** on the terminal. (Note: the pound sign "#" is not literal value, it's supposed to represent the number that step 2 returns returns).
+
+Your webcam should now be workingso go ahead and scan a QR code. You should now see the value of QR Code on the terminal saying preceeded by the string "QR Code:". You can scan as many QR codes as you'd like. Use **Ctrl+C** to exit the program.
+
+Congratulations! You've just implemented a QR Code scanner. Hurray!. 
+
+Nope. You're still not done yet. You need to add the caplibity to blink the L.E.D as well as save the results into a file for external use (ex: storing information into a database). Keep reading to find out how you add these.
+
 #### I used the follwing code to Scan QR Codes to implement the QR code scanner
 | Main Shell Script | Python Blink |
 |---|---|
-|[scanQR.sh](#/Build Log Files/scanQR.sh)|[alertLight.py](#/Build Log Files/alertLight.py)|
+|[scanQR.sh](/Build Log Files/scanQR.sh)|[alertLight.py](/Build Log Files/alertLight.py)|
 
+The python code is pretty simple it turns the the L.E.D on for 1/8th of a second and then turns it off for the same duration. This cycle is repeated 11 times to show the L.E.D feedback. 
+
+To change the 1/8th second on/off duration simply change the **time.sleep(0.125)** value to any number you like in the blink function. Lower values results in short durations and conversely higher values result in longer durations.
+```python
+def blink(pin):  
+        GPIO.output(pin,GPIO.HIGH)  
+        time.sleep(0.125)  
+        GPIO.output(pin,GPIO.LOW)  
+        time.sleep(0.125)  
+        return
+```
+
+Moerver you can also change the number of cyles for how many times this led on/off will be repeated. Simply change the loop count by changing 11 to any value you desire.
+
+```python
+for i in range(0,11):
+```
+
+When it's all done you test run this program by typing **python alert.py** on the terminal. The L.E.D. should display according to your modifications.
 
 Production Testing
 ==================
