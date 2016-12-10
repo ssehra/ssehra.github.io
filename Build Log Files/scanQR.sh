@@ -1,5 +1,4 @@
 #!/bin/bash
-# Data Matrix Reader - Scan And Exit
 rm scan-results.txt
 
 # Vars
