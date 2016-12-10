@@ -150,14 +150,19 @@ To test the PCB, run the the traffic2B.c (source code available **-->** [here](/
 2. Compile the file using **gcc -Wall -o traffic2B traffic2B.c -lwiringPi** (this creates an execuatalbe object called traffic2B)
 3. Run the file using **sudo ./traffic2B**
 
-This should start blinking the L.E.D's in a traffic light pattern for an endless loop. Use Ctrl+C to exit the program. If this works, this means the PCB is ready to used.
+This should start blinking the L.E.D's in a traffic light pattern for an endless loop. Use Ctrl+C to exit the program. If this works, this means the PCB is ready to be used.
 
 You are now ready to add the code to implement the QR Code scanning.
 
 
 Scanning QR Codes 
 =================
-abc
+You can generate your own QR Codes ---> [here](http://www.qr-code-generator.com/), or any other website of your choosing. If you are using a service thats allows you to set the pixel count of the QR code, I recommend setting it to the minimum as it's faster and can be handled by webcams with lower resolution. 
+
+#### I used the follwing code to Scan QR Codes to implement the QR code scanner
+| Main Shell Script | Python L.E.D Blink |
+|---|---|
+|[scanQR.sh](#/Build Log Files/scanQR.sh)|[alertLight.py](#/Build Log Files/alertLight.py)|
 
 
 Production Testing
