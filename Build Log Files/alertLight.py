@@ -11,7 +11,6 @@ def blink(pin):
 GPIO.setmode(GPIO.BOARD)  
 # set up GPIO output channel  
 GPIO.setup(12, GPIO.OUT)  
-# blink GPIO17 50 times  
-for i in range(0,11):  
-        blink(12)  
+# blink GPIO12 12 times  
+for i in range(0,11): blink(12)  
 GPIO.cleanup() 
