@@ -160,7 +160,7 @@ Scanning QR Codes
 You can generate your own QR Codes ---> [here](http://www.qr-code-generator.com/), or any other website of your choosing. If you are using a service thats allows you to set the pixel count of the QR code, I recommend setting it to the minimum as it's faster and can be handled by webcams with lower resolution. 
 
 #### I used the follwing code to Scan QR Codes to implement the QR code scanner
-| Main Shell Script | Python L.E.D Blink |
+| Main Shell Script | Python Blink |
 |---|---|
 |[scanQR.sh](#/Build Log Files/scanQR.sh)|[alertLight.py](#/Build Log Files/alertLight.py)|
 
