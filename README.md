@@ -155,7 +155,7 @@ This should start blinking the L.E.D's in a traffic light pattern for an endless
 You are now ready to add the code to implement the QR Code scanning.
 
 
-Scanning QR Codes 
+Scanning QR Codes
 =================
 You can generate your own QR Codes ---> [here](http://www.qr-code-generator.com/), or any other website of your choosing. If you are using a service thats allows you to set the pixel count of the QR code, I recommend setting it to the minimum as it's faster and can be handled by webcams with lower resolution. 
 
@@ -194,6 +194,8 @@ for i in range(0,11):
 ```
 
 When it's all done you test run this program by typing **python alert.py** on the terminal. The L.E.D. should display according to your modifications.
+
+
 
 Production Testing
 ==================
