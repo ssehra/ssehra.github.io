@@ -22,7 +22,7 @@ Table of Contents
 7. [Scanning QR Codes](#scanning-qr-codes)
   - [Installing zbar](#now-we-install-the-zbar-library-to-scan-qr-codes-follow-these-step-below)
   - [Core Programs](#i-used-the-follwing-code-to-scan-qr-codes-to-implement-the-qr-code-scanner)
-  - [Program Execution]()
+  - [Program Execution](#to-run-the-final-code-follow-these-steps)
 8. [Production Testing](#production-testing)
 9. [Conclusion](#conclusion)
 
