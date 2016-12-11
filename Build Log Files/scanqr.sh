@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Compile and execute greenLight.c 
 gcc -Wall -o greenLight greenLight.c -lwiringPi
 sudo ./greenLight
 
