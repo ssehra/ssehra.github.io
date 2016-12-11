@@ -201,7 +201,7 @@ The C file *greenLight.c* is just there to initiate the green light for use duri
 
 The Shell Script file *scanqr.sh* is where the bulk of the program lies. It starts off by compiling and executing *greenLight.c*. Then it defines a few variables for storing information. Every session of script execution produces a file called "scan" followed by a timestamp and the .txt extention. You can change the filename by editing the variable $ScanResult.
 
-```bash
+```shell script
 ScanResult="$cwd/scan_$DATE.txt"
 ```
 
