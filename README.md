@@ -171,9 +171,9 @@ Congratulations! You've just implemented a QR Code scanner. Hurray!.
 Nope. You're still not done yet. You need to add the caplibity to blink the L.E.D as well as save the results into a file for external use (ex: storing information into a database). Keep reading to find out how you add these.
 
 #### I used the follwing code to Scan QR Codes to implement the QR code scanner
-| Main Shell Script | Python Blink |
-|---|---|
-|[scanQR.sh](/Build Log Files/scanQR.sh)|[alertLight.py](/Build Log Files/alertLight.py)|
+| Main Shell Script | Python Blink | greenLight.c |
+|---|---|---|
+|[scanqr.sh](/Build Log Files/scanqr.sh)|[alertLight.py](/Build Log Files/alertLight.py)|[greenLight.c](/Build Log Files/greenLight.c)
 
 The python code is pretty simple it turns the the L.E.D on for 1/8th of a second and then turns it off for the same duration. This cycle is repeated 11 times to show the L.E.D feedback. 
 
