@@ -209,6 +209,11 @@ The fuction *scan()* initiates zbarcam to scan QR codes and then kills the task 
 function scan() {
   zbarcam --raw --prescale=320x240 /dev/video0 > $tmp &
   ...
+  # Kill tasks, free up space and call test.py to blink L.E.D.
+  # Append scan results to file
+  # Show scan results
+  # Prompt to continue scanning
+}
 ```
 More inforation about the flags and their usages can be found --> [here](http://manpages.ubuntu.com/manpages/xenial/man1/zbarcam.1.html).
 
