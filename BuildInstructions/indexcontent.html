@@ -71,205 +71,264 @@
 <p>If you already have acquired all the parts and got the PCB printed, I beleive this project can be completed in a day. That's if you copy paste the all the code and it runs flawlessly without any errors.</p>
 </SECTION>
 
-		
-<script type="text/javascript">
-// <![CDATA[
-var colour="random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
-var sparkles=50;
+<SECTION ID="PCBSoldering">
+<H3>PCB Soldering</H3>
 
-/****************************
-*  Tinkerbell Magic Sparkle *
-*(c)2005-13 mf2fm web-design*
-*  http://www.mf2fm.com/rv  *
-* DON'T EDIT BELOW THIS BOX *
-****************************/
-var x=ox=400;
-var y=oy=300;
-var swide=800;
-var shigh=600;
-var sleft=sdown=0;
-var tiny=new Array();
-var star=new Array();
-var starv=new Array();
-var starx=new Array();
-var stary=new Array();
-var tinyx=new Array();
-var tinyy=new Array();
-var tinyv=new Array();
+</SECTION>		
+</ARTICLE>
 
-window.onload=function() { if (document.getElementById) {
-  var i, rats, rlef, rdow;
-  for (var i=0; i<sparkles; i++) {
-    var rats=createDiv(3, 3);
-    rats.style.visibility="hidden";
-    rats.style.zIndex="999";
-    document.body.appendChild(tiny[i]=rats);
-    starv[i]=0;
-    tinyv[i]=0;
-    var rats=createDiv(5, 5);
-    rats.style.backgroundColor="transparent";
-    rats.style.visibility="hidden";
-    rats.style.zIndex="999";
-    var rlef=createDiv(1, 5);
-    var rdow=createDiv(5, 1);
-    rats.appendChild(rlef);
-    rats.appendChild(rdow);
-    rlef.style.top="2px";
-    rlef.style.left="0px";
-    rdow.style.top="0px";
-    rdow.style.left="2px";
-    document.body.appendChild(star[i]=rats);
-  }
-  set_width();
-  sparkle();
-}}
 
-function sparkle() {
-  var c;
-  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
-    ox=x;
-    oy=y;
-    for (c=0; c<sparkles; c++) if (!starv[c]) {
-      star[c].style.left=(starx[c]=x)+"px";
-      star[c].style.top=(stary[c]=y+1)+"px";
-      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-      star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
-      star[c].style.visibility="visible";
-      starv[c]=50;
-      break;
-    }
-  }
-  for (c=0; c<sparkles; c++) {
-    if (starv[c]) update_star(c);
-    if (tinyv[c]) update_tiny(c);
-  }
-  setTimeout("sparkle()", 40);
+<h1><a id="Prototype_Lab_Flow_0"></a>Prototype Lab Flow</h1>
+<p>Projects blog: <a href="http://ssehra.github.io/">http://ssehra.github.io</a></p>
+<h1><a id="Table_of_Contents_5"></a>Table of Contents</h1>
+<ol>
+<li><a href="http://dillinger.io/#introduction">Introduction</a></li>
+</ol>
+<ul>
+<li><a href="http://dillinger.io/#what-is-the-protoype-lab-flow-project">What is the Project?</a></li>
+<li><a href="http://dillinger.io/#why-is-is-useful">Why is is useful?</a></li>
+</ul>
+<ol start="2">
+<li><a href="http://dillinger.io/#build-budget">Build Budget</a></li>
+</ol>
+<ul>
+<li><a href="http://dillinger.io/#heres-a-breakdown-of-the-item-needed-to-build-this-project">Core items needed for the this project</a></li>
+<li><a href="http://dillinger.io/#the-list-of-pcb-components-needed-to-build-the-pcb">List components required for the PCB</a></li>
+</ul>
+<ol start="3">
+<li><a href="http://dillinger.io/#time-commitment">Time Commitment</a></li>
+<li><a href="http://dillinger.io/#pcb-soldering">PCB Soldering</a></li>
+</ol>
+<ul>
+<li><a href="http://dillinger.io/#schematic-for-the-pcb">Schematic for the PCB</a></li>
+<li><a href="http://dillinger.io/#ariel-view-of-my-completed-pcb">My Completed PCB</a></li>
+</ul>
+<ol start="5">
+<li><a href="http://dillinger.io/#mechanical-assembly--power-up">Mechanical Assembly &amp; Power Up</a></li>
+<li><a href="http://dillinger.io/#unit-testing">Unit Testing</a></li>
+</ol>
+<ul>
+<li><a href="http://dillinger.io/#webcam-functionality-testing">Webcam functionality</a></li>
+<li><a href="http://dillinger.io/#pcb-functionality-testing">PCB functionality testing</a></li>
+</ul>
+<ol start="7">
+<li><a href="http://dillinger.io/#scanning-qr-codes">Scanning QR Codes</a></li>
+</ol>
+<ul>
+<li><a href="http://dillinger.io/#now-we-install-the-zbar-library-to-scan-qr-codes-follow-these-step-below">Installing zbar</a></li>
+<li><a href="http://dillinger.io/#i-used-the-follwing-code-to-scan-qr-codes-to-implement-the-qr-code-scanner">Core Programs</a></li>
+<li><a href="http://dillinger.io/#to-run-the-final-code-follow-these-steps">Program Execution</a></li>
+</ul>
+<ol start="8">
+<li><a href="http://dillinger.io/#ending-notes">Ending Notes</a></li>
+</ol>
+<h1><a id="Introduction_28"></a>Introduction</h1>
+<p>This document will provide you with all the necessary information required to build your very own “Prototype Lab Flow” project.</p>
+<h4><a id="What_is_the_Protoype_Lab_Flow_project_32"></a><em>What is the Protoype Lab Flow project?</em></h4>
+<p>Well in simple terms, this project is a realtime database that allows the user to add/remove items into the database by simply scanning QR Codes.</p>
+<h4><a id="Why_is_is_useful_35"></a><em>Why is is useful?</em></h4>
+<p>This project replaces the current item sign-out system used at the Humber Protoype Lab as well as the Humber Parts Crib. The current system requires a student to fill out a form and and lend their Humber ID Card in order to borrow items. This system is a slower process because students have to wait in queues just a fill out a form.  This project makes this system more efficient by allowing the adminstrator to simply scan QR Codes instead of waiting for the students to fill out thier forms.</p>
+<p>If you are still on how the project will work or what will it do the systems diagram below should be helpful.</p>
+<p>![Alt text](/Build Log Files/Diagram.png?raw=true “System Diagram”)</p>
+<p><em>The diagram above shows input, ouput and processing components of this project. The Webcam will scan QR codes as input while the Raspberry Pi will process that input to add into a database. The final output will the an andorid application showing that the item has been added to the database. However for now, a feedback from L.E.D. blinking will replace the andorid application in the systems diagram.</em></p>
+<h1><a id="Build_Budget_45"></a>Build Budget</h1>
+<p>Before we start building something, we need to plan a budget. A budget will be especially helpful in managing the financial costs related to our build.</p>
+<h4><a id="Heres_a_breakdown_of_the_item_needed_to_build_this_project_49"></a>Here’s a breakdown of the item needed to build this project.</h4>
+<ol>
+<li>A Raspberry Pi</li>
+<li>USB Webcam</li>
+<li>A MicroUSB AC adapter</li>
+<li>A Case for Raspberry Pi</li>
+<li>HDMI Cable</li>
+<li>A MicroSD Card (8GB or higher)</li>
+<li><s>Keyboard/Mouse Combo (USB or bluetooth)</s></li>
+<li><s>A monitor</s></li>
+</ol>
+<h4><a id="The_list_of_PCB_components_needed_to_build_the_PCB_59"></a>The list of PCB components needed to build the PCB</h4>
+<ul>
+<li>2x20 Header Female (Qty: 1) $3.73</li>
+<li>100nF Capacitor (Qty: 4) $5.80</li>
+<li>10uF Capacitor (Qty: 1) $1.45</li>
+<li>1kΩ Resistor (Qty: 1) $0.15</li>
+<li>3.9kΩ Resistor (Qty: 4) $2.40</li>
+<li>4.7kΩ Resistor (Qty: 3) $1.35</li>
+<li>3mm LED (Qty: 1)  $0.61</li>
+<li>N-Channel Logic Level MOSFET (Qty: 1) $0.99</li>
+<li><s>Real Time clock Battery (Qty: 1) $0.48</s></li>
+<li><s>I2C Real Time Clock (Qty: 1) $11.95</s></li>
+<li><s>8-bit I2C ADC&amp;DAC with sensors (Qty: 1) $8.50</s></li>
+<li><s>1x4 Header Female (Qty: 2)  $1.70</s></li>
+<li><s>1x5 Header Female (Qty: 2) $3.40</s></li>
+</ul>
+<p>Let’s start with the core of the project, a Raspberry Pi. The Raspberry Pi alone costs around $60-70 online if you’re lucky enough find one. I highly recommend opting in for the Raspberry Pi starter kit instead as it comes with all the necessary items like a microSD card, an AC adapter and a case (as well as other stuff like a microSD reader). It’s available for about $20-30 extra.</p>
+<p>A case is highly recommended as the raspberry pi is relatively fragile microcomputer. A microSD card is required to run the Raspbian OS on the pi. And of course, the AC adapter can be substituted with any microUSB phone/tablet charger.</p>
+<p>Moving on, a webcam will be required to scan QR codes. Any USB webcam will do fine. So no need a spend the extra bucks for a high definition webcam. An average webcam will cost between $20 and $35. Or even cheaper if you find a used/refurbished one.</p>
+<p>Finally, there is cost associated with the fabricating of a PCB (Printed Circuit board) as well it’s components. The Prototype Lab at Humber College charges about $40 to print a PCB. The components I have on my PCB cost about $42.52. However, I do a have a bunch of extra components like sensors and headers that you don’t need. This is why is I have them corssed out on the list. Morever, this brings the cost down from $42.52 to $16.49. The actual cost might still be higher since not all components are sold in the quantitiy of single units. As a Humber student, all of this is covered as part of my tuition fees.</p>
+<p>Altogether I spent about $100 on the Raspberry Pi starter kit from Amazon. If you buy an older Raspberry Pi, you have to spend extra on a USB wifi receiver or use the ethernet instead. I used my old webcam which I bought for about $35-$40 at the time. And I didn’t have to pay extra for the PCB since I’m a Humber student as well as the PCB components. I’m not including a monitor, and a keyboard and a mouse since almost eveybody owns at least one of each. If not then you can buy any monitor with an HDMI and any USB or bluetooth keyboard/mouse combo.</p>
+<p>Here’s a table thats shows all the items I bought and how much I paid for them. Note all prices are in CAD. I’m also including the PCB fabricating cost to create a reference for you to compare total costs.</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Item</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rasberry Pi 3 Starter Kit</td>
+<td>$99.99</td>
+</tr>
+<tr>
+<td>Microsoft LifeCam VX-1000</td>
+<td>$34.99</td>
+</tr>
+<tr>
+<td>PCB Fabrication Cost</td>
+<td>$40</td>
+</tr>
+<tr>
+<td>Reqruired components for PCB</td>
+<td>$42.52</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>$245.78</strong></td>
+</tr>
+</tbody>
+</table>
+<p>My final build cost totals to about approximately $200 (That’s including taxes and other expenses like shipping and handling).</p>
+<h1><a id="Time_Commitment_97"></a>Time Commitment</h1>
+<p>Time is a resource arguably as valuable as money. And this project demands plenty of it.</p>
+<p>I had almost 15 weeks to work this project however with these detailed instructions I will be cutting that time significantly for anyone wanting to recreate this project. Majority of my time was spent in implementing the QR scanning functionality and blinking the L.E.D. for feedback. It was my first time soldering and I was able to solder the PCB in less than an hour.</p>
+<p>If you already have acquired all the parts and got the PCB printed, I beleive this project can be completed in a day. That’s if you copy paste the all the code and it runs flawlessly without any errors.</p>
+<h1><a id="PCB_Soldering_106"></a>PCB Soldering</h1>
+<p>Time to start building the PCB! However you build something, you must design it first. That’s where these files come in handy. Go ahead and download these files.</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Board File</th>
+<th>Schematic File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[HSHV4-student version.brd](/Build Log Files/HSHV4-student version.brd)</td>
+<td>[HSHV4-student version.sch](/Build Log Files/HSHV4-student version.sch)</td>
+</tr>
+</tbody>
+</table>
+<p>Now that you have these files, you’ll need eagle to open them. Eagle can be downloaded  <strong>–&gt;</strong> <a href="https://cadsoft.io/">here</a>. After installing Eagle, edit the name in the files to your own. After you finish editing, go ahead and follow the instructions <strong>–&gt;</strong> <a href="https://learn.sparkfun.com/tutorials/using-eagle-board-layout/generating-gerbers">here</a> to generate the following files.</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Top Copper (.GTL)</th>
+<th>Bottom Copper (.GBL)</th>
+<th>Top Soldermask (.GTS)</th>
+<th>Bottom Soldermask (.GBS)</th>
+<th>Top Silkscreen (.GTO)</th>
+<th>Bottom Silkscreen (.GBO)</th>
+<th>Drill File (.TXT)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[HSHV4-student version.GTL](/Build Log Files/HSHV4-student version.GTL)</td>
+<td>[HSHV4-student version.GBL](/Build Log Files/HSHV4-student version.GBL)</td>
+<td>[HSHV4-student version.GTS](/Build Log Files/HSHV4-student version.GTS)</td>
+<td>[HSHV4-student version.GBS](/Build Log Files/HSHV4-student version.GBS)</td>
+<td>[HSHV4-student version.GTO](/Build Log Files/HSHV4-student version.GTO)</td>
+<td>[HSHV4-student version.GBO](/Build Log Files/HSHV4-student version.GBO)</td>
+<td>[HSHV4-student version.TXT](/Build Log Files/HSHV4-student version.TXT)</td>
+</tr>
+</tbody>
+</table>
+<h4><a id="Schematic_for_the_PCB_120"></a>Schematic for the PCB</h4>
+<p>![Alt text](/Build Log Files/Schematic.PNG?raw=true “Schematic”)</p>
+<p>All of these files are used to instruct the machine with the coordinates and to engrave the PCB. It takes about 4-5 hours for the machine to print it. After it’s done, wash with water <em>(preferably deionized water)</em> and wipe it a piece or cloth to avoid leaving water marks (I recommend using a micro-fiber cloth) and wait for it to dry completely. After that’s done you can sand the PCB a bit just to make it shinier. If you do sand it you have the repeat the washing process again.</p>
+<p>Now the PCB is ready to soldered. However safety comes first. Make sure to wear safety glasses and and dress appropriately for a lab/workplace environmnet. Now Use the schmatic as the guide and solder each of the components to their respective places and making sure that the excess solder is not causing a short. Now inspect each soldering carefully again use a voltmeter to test for continuity. If all goes well you are ready to move on to the next chapter.</p>
+<h4><a id="Ariel_view_of_my_completed_PCB_127"></a><em>Ariel view of my completed PCB</em></h4>
+<p>![Alt text](/Build Log Files/PCB.png?raw=true “My PCB”)</p>
+<h1><a id="Mechanical_Assembly__Power_Up_131"></a>Mechanical Assembly &amp; Power Up</h1>
+<p>By now, you have acquired all the parts you are ready to start doing mechanical assembly. It’s extremely easy from here onwards since this guide a shortchut to the finishline.</p>
+<p>You should now have the following: a Raspberry Pi, a USB Webcam, a MicroUSB power source and A MicroSD Card (8GB or higher). The starter kit’s MicroSD card comes with pre-loaded Raspbian.iso so all you have to do is install it. If it doens’t then it can downloaded from the Raspberry Pi website and copied on the MicroSD via a card reader (also included in the starter kit). Insert the flash card into Raspberry Pi.</p>
+<p>Begin by connecting power, HDMI and a keyboard and mouse and the USB Webcam to the Raspberry Pi. Also connect your PCB to  the Raspberry Pi. After it boots to the desktop, use <strong>sudo apt-get update</strong> on the commandline terminal to update the Raspbian to the latest version. Then use <strong>sudo apt-get dist-upgrade</strong> to upgrade all the installed packages. These commands require internet (ethernet or wifi) to download the updates.</p>
+<p>That’s it with the assembly you’re ready to scroll down.</p>
+<h1><a id="Unit_Testing_142"></a>Unit Testing</h1>
+<h4><a id="Webcam_functionality_testing_144"></a>Webcam functionality testing</h4>
+<p>For testing, start by installing the fswebcam library by typing <strong>sudo apt-get install fswebcam</strong>. Then type fswebcam followed by a filename with .jpg extention. For example, <strong>fswebcam image.jpg</strong>. This will snap a picture and save it the current directory with the filename image.jpg. If this works, that means the USB Webcam functions properly.</p>
+<h4><a id="PCB_functionality_testing_147"></a>PCB functionality testing</h4>
+<p>To test the PCB, run the the traffic2B.c (source code available <strong>–&gt;</strong> [here](/Build Log Files/traffic2B.c)) with the following steps.</p>
+<ol>
+<li>Type <strong>sudo apt-get install wiringPi</strong> on the terminal to the the Pi Wiring Library</li>
+<li>Compile the file using <strong>gcc -Wall -o traffic2B traffic2B.c -lwiringPi</strong> (this creates an execuatalbe object called traffic2B)</li>
+<li>Run the file using <strong>sudo ./traffic2B</strong></li>
+</ol>
+<p>This should start blinking the L.E.D’s in a traffic light pattern for an endless loop. Use <strong>Ctrl+C</strong> to exit the program. If this works, this means the PCB is ready to be used.</p>
+<p>You are now ready to add the code to implement the QR Code scanning.</p>
+<h1><a id="Scanning_QR_Codes_159"></a>Scanning QR Codes</h1>
+<p>You can generate your own QR Codes —&gt; <a href="http://www.qr-code-generator.com/">here</a>, or any other website of your choosing. If you are using a service thats allows you to set the pixel count of the QR code, I recommend setting it to the minimum as it’s faster and can be handled by webcams with lower resolution.</p>
+<h4><a id="Now_we_install_the_zbar_library_to_scan_QR_codes_Follow_these_step_below_163"></a>Now we install the zbar library to scan QR codes. Follow these step below:</h4>
+<ol>
+<li>Type <strong>sudo apt-get install zbar-tools</strong> on the terminal</li>
+<li>Use <em><em>ls /dev/video</em>/</em>* to find your video source</li>
+<li>Test by scanning a QR code by typing <strong>zbarcam /dev/video#</strong> on the terminal. (Note: the pound sign “#” is not literal value, it’s supposed to represent the number that step 2 returns returns).</li>
+</ol>
+<p>Your webcam should now be workingso go ahead and scan a QR code. You should now see the value of QR Code on the terminal saying preceeded by the string “QR Code:”. You can scan as many QR codes as you’d like. Use <strong>Ctrl+C</strong> to exit the program.</p>
+<p>Congratulations! You’ve just implemented a QR Code scanner. Hurray!.</p>
+<p>Nope. You’re still not done yet. You need to add the caplibity to blink the L.E.D as well as save the results into a file for external use (ex: storing information into a database). Keep reading to find out how you add these.</p>
+<h4><a id="I_used_the_follwing_code_to_Scan_QR_Codes_to_implement_the_QR_code_scanner_174"></a>I used the follwing code to Scan QR Codes to implement the QR code scanner</h4>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Shell Script</th>
+<th>Python Blink</th>
+<th>greenLight.c</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[<a href="http://scanqr.sh/">scanqr.sh</a>](/Build Log Files/scanqr.sh)</td>
+<td>[<a href="http://alertlight.py/">alertLight.py</a>](/Build Log Files/alertLight.py)</td>
+<td>[greenLight.c](/Build Log Files/greenLight.c)</td>
+</tr>
+</tbody>
+</table>
+<p>The python code is pretty simple it turns the the L.E.D on for 1/8th of a second and then turns it off for the same duration. This cycle is repeated 11 times to show the L.E.D feedback.</p>
+<p>To change the 1/8th second on/off duration simply change the <strong>time.sleep(0.125)</strong> value to any number you like in the blink function. Lower values results in short durations and conversely higher values result in longer durations.</p>
+<pre><code class="language-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">blink</span><span class="hljs-params">(pin)</span>:</span>  
+        GPIO.output(pin,GPIO.HIGH)  
+        time.sleep(<span class="hljs-number">0.125</span>)  
+        GPIO.output(pin,GPIO.LOW)  
+        time.sleep(<span class="hljs-number">0.125</span>)  
+        <span class="hljs-keyword">return</span>
+</code></pre>
+<p>Moreover you can also change the number of cyles for how many times this led on/off will be repeated. Simply change the loop count by changing 11 to any value you desire.</p>
+<pre><code class="language-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>,<span class="hljs-number">11</span>):
+</code></pre>
+<p>When it’s all done you test run this program by typing <strong>python <a href="http://alert.py/">alert.py</a></strong> on the terminal. The L.E.D. should display according to your modifications.</p>
+<p>The C file <em>greenLight.c</em> is just there to initiate the green light for use during the scanning process. It just blinks the led in green for 1/10th of the second. I recommend leaving it as is.</p>
+<p>The Shell Script file <em><a href="http://scanqr.sh/">scanqr.sh</a></em> is where the bulk of the program lies. It starts off by compiling and executing <em>greenLight.c</em>. Then it defines a few variables for storing information. Every session of script execution produces a file called “scan” followed by a timestamp and the .txt extention. You can change the output filename by editing the variable $ScanResult.</p>
+<pre><code class="language-bash"><span class="hljs-comment"># Name of scan results file</span>
+ScanResult=<span class="hljs-string">"<span class="hljs-variable">$cwd</span>/scan_<span class="hljs-variable">$DATE</span>.txt"</span>
+</code></pre>
+<p>The fuction <em>scan()</em> initiates zbarcam to scan QR codes and then kills the task after saving the output. It even asks the user to scan multiple entires. Since it’s using zbarcam you apply modifications by using flags like <em>–prescale</em> to set the resolution of the scanning resolution.</p>
+<pre><code class="language-bash"><span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">scan</span></span>() {
+  zbarcam --raw --prescale=<span class="hljs-number">320</span>x240 /dev/video0 &gt; <span class="hljs-variable">$tmp</span> &amp;
+  ...
+  <span class="hljs-comment"># Kill tasks, free up space and call test.py to blink L.E.D.</span>
+  <span class="hljs-comment"># Append scan results to file</span>
+  <span class="hljs-comment"># Show scan results</span>
+  <span class="hljs-comment"># Prompt to continue scanning</span>
 }
-
-function update_star(i) {
-  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
-  if (starv[i]) {
-    stary[i]+=1+Math.random()*3;
-    starx[i]+=(i%5-2)/5;
-    if (stary[i]<shigh+sdown) {
-      star[i].style.top=stary[i]+"px";
-      star[i].style.left=starx[i]+"px";
-    }
-    else {
-      star[i].style.visibility="hidden";
-      starv[i]=0;
-      return;
-    }
-  }
-  else {
-    tinyv[i]=50;
-    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
-    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
-    tiny[i].style.width="2px";
-    tiny[i].style.height="2px";
-    tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
-    star[i].style.visibility="hidden";
-    tiny[i].style.visibility="visible"
-  }
-}
-
-function update_tiny(i) {
-  if (--tinyv[i]==25) {
-    tiny[i].style.width="1px";
-    tiny[i].style.height="1px";
-  }
-  if (tinyv[i]) {
-    tinyy[i]+=1+Math.random()*3;
-    tinyx[i]+=(i%5-2)/5;
-    if (tinyy[i]<shigh+sdown) {
-      tiny[i].style.top=tinyy[i]+"px";
-      tiny[i].style.left=tinyx[i]+"px";
-    }
-    else {
-      tiny[i].style.visibility="hidden";
-      tinyv[i]=0;
-      return;
-    }
-  }
-  else tiny[i].style.visibility="hidden";
-}
-
-document.onmousemove=mouse;
-function mouse(e) {
-  if (e) {
-    y=e.pageY;
-    x=e.pageX;
-  }
-  else {
-    set_scroll();
-    y=event.y+sdown;
-    x=event.x+sleft;
-  }
-}
-
-window.onscroll=set_scroll;
-function set_scroll() {
-  if (typeof(self.pageYOffset)=='number') {
-    sdown=self.pageYOffset;
-    sleft=self.pageXOffset;
-  }
-  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
-    sdown=document.body.scrollTop;
-    sleft=document.body.scrollLeft;
-  }
-  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-    sleft=document.documentElement.scrollLeft;
-    sdown=document.documentElement.scrollTop;
-  }
-  else {
-    sdown=0;
-    sleft=0;
-  }
-}
-
-window.onresize=set_width;
-function set_width() {
-  var sw_min=999999;
-  var sh_min=999999;
-  if (document.documentElement && document.documentElement.clientWidth) {
-    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
-    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
-  }
-  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
-    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
-    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
-  }
-  if (document.body.clientWidth) {
-    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
-    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
-  }
-  if (sw_min==999999 || sh_min==999999) {
-    sw_min=800;
-    sh_min=600;
-  }
-  swide=sw_min;
-  shigh=sh_min;
-}
-
-function createDiv(height, width) {
-  var div=document.createElement("div");
-  div.style.position="absolute";
-  div.style.height=height+"px";
-  div.style.width=width+"px";
-  div.style.overflow="hidden";
-  return (div);
-}
-
-function newColour() {
-  var c=new Array();
-  c[0]=255;
-  c[1]=Math.floor(Math.random()*256);
-  c[2]=Math.floor(Math.random()*(256-c[1]/2));
-  c.sort(function(){return (0.5 - Math.random());});
-  return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
-}
-// ]]>
-</script>
-		
-		
-		</ARTICLE>
+</code></pre>
+<p>More inforation about the flags and their usages can be found --&gt; <a href="http://manpages.ubuntu.com/manpages/xenial/man1/zbarcam.1.html">here</a>.</p>
+<h4><a id="To_run_the_final_code_follow_these_steps_219"></a>To run the final code follow these steps:</h4>
+<ol>
+<li>Make sure all three core files: <em>greenLight.c</em>, <em><a href="http://alertlight.py/">alertLight.py</a></em> and <em><a href="http://scanqr.sh/">scanqr.sh</a></em> are in the same directory.</li>
+<li>On the terminal, use <strong>chmod 777</strong> followed by the filenames and grant all Read-Write-Execute permissions to the core files.</li>
+<li>Type <strong>./scanqr.sh</strong> to execute the shell script.</li>
+</ol>
+<p>You should now have the program working. The program scans QR code and then blinks the L.E.D. as well showing the scanned item on the screen. After scanning an item it prompts to scan another. If you choose yes, it scans another item and prompts to scan more items. If you choose no, then the program exits and shows the list of items scanned during the session. According to my code, every session generates a new file with a timestamp. You can use one file and reuse if you want. Futhermore, you can press <strong>Ctrl+C</strong> anytime to exit the program.</p>
+<p>Congratulations! You’ve just implemented the full QR Code scanner program. Hurray!.</p>
+<h1><a id="Ending_Notes_229"></a>Ending Notes</h1>
+<p>I hope you found this guide helpful and were able to reproduce your very own Protoype Lab Flow project.  With everything functioning as it should and costing you a total of hopefully less than $300. Here’s a sample output of the program.</p>
