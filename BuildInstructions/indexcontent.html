@@ -222,7 +222,7 @@
 <p>Moreover you can also change the number of cyles for how many times this led on/off will be repeated. Simply change the loop count by changing 11 to any value you desire.</p>
 <pre><code class="language-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>,<span class="hljs-number">11</span>):
 </code></pre>
-<p>When it’s all done you test run this program by typing <strong>python <a href="http://alert.py/">alert.py</a></strong> on the terminal. The L.E.D. should display according to your modifications.</p>
+<p>When it’s all done you test run this program by typing <strong>python alert.py</strong> on the terminal. The L.E.D. should display according to your modifications.</p>
 <p>The C file <em>greenLight.c</em> is just there to initiate the green light for use during the scanning process. It just blinks the led in green for 1/10th of the second. I recommend leaving it as is.</p>
 <p>The Shell Script file <em><a href="http://scanqr.sh/">scanqr.sh</a></em> is where the bulk of the program lies. It starts off by compiling and executing <em>greenLight.c</em>. Then it defines a few variables for storing information. Every session of script execution produces a file called “scan” followed by a timestamp and the .txt extention. You can change the output filename by editing the variable $ScanResult.</p>
 <pre><code class="language-bash"><span class="hljs-comment"># Name of scan results file</span>
@@ -241,7 +241,7 @@ ScanResult=<span class="hljs-string">"<span class="hljs-variable">$cwd</span>/sc
 <p>More inforation about the flags and their usages can be found --&gt; <a href="http://manpages.ubuntu.com/manpages/xenial/man1/zbarcam.1.html">here</a>.</p>
 <h4><a id="To_run_the_final_code_follow_these_steps_219"></a>To run the final code follow these steps:</h4>
 <ol>
-<li>Make sure all three core files: <em>greenLight.c</em>, <em><a href="http://alertlight.py/">alertLight.py</a></em> and <em><a href="http://scanqr.sh/">scanqr.sh</a></em> are in the same directory.</li>
+<li>Make sure all three core files: <em>greenLight.c</em>, <em>alertLight.py</em> and <em>scanqr.sh</em> are in the same directory.</li>
 <li>On the terminal, use <strong>chmod 777</strong> followed by the filenames and grant all Read-Write-Execute permissions to the core files.</li>
 <li>Type <strong>./scanqr.sh</strong> to execute the shell script.</li>
 </ol>
