@@ -22,6 +22,7 @@ Table of Contents
 7. [Scanning QR Codes](#scanning-qr-codes)
   - [Installing zbar](#now-we-install-the-zbar-library-to-scan-qr-codes-follow-these-step-below)
   - [Core Programs](#i-used-the-follwing-code-to-scan-qr-codes-to-implement-the-qr-code-scanner)
+  - [Program Execution]()
 8. [Production Testing](#production-testing)
 9. [Conclusion](#conclusion)
 
@@ -204,7 +205,7 @@ The Shell Script file *scanqr.sh* is where the bulk of the program lies. It star
 ScanResult="$cwd/scan_$DATE.txt"
 ```
 
-The fuction *scan()* initiates zbarcam to scan QR codes and then kills the task after saving the output. It even asks the user to scan multiple entires. Since it's using zbarcam you apply modifications by using flags like *--prescale* to set the resolution of the scanning resolution. Moreinforation
+The fuction *scan()* initiates zbarcam to scan QR codes and then kills the task after saving the output. It even asks the user to scan multiple entires. Since it's using zbarcam you apply modifications by using flags like *--prescale* to set the resolution of the scanning resolution. 
 ```bash
 function scan() {
   zbarcam --raw --prescale=320x240 /dev/video0 > $tmp &
@@ -217,7 +218,14 @@ function scan() {
 ```
 More inforation about the flags and their usages can be found --> [here](http://manpages.ubuntu.com/manpages/xenial/man1/zbarcam.1.html).
 
+#### To run the final code follow these steps:
+1.) Make sure all three core files: *greenLight.c*, *alertLight.py* and *scanqr.sh* are in the same directory.
+2.) On the terminal, use **chmod 777** followed by the filenames and grant all Read-Write-Execute permissions to the core files.
+3.) Type **./scanqr.sh** to execute the shell script.
 
+You should now have the program working. The program scans QR code and then blinks the L.E.D. as well showing the scanned item on the screen. After scanning an item it prompts to scan another. If you choose yes, it scans another item and prompts to scan more items. If you choose no, then the program exits and shows the list of items scanned during the session. According to my code, every session generates a new file with a timestamp. You can use one file and reuse if you want. Futhermore, you can press **Ctrl+C** anytime to exit the program.
+
+Congratulations! You've just implemented the full QR Code scanner program. Hurray!.
 
 
 Production Testing
