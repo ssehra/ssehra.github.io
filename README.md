@@ -20,6 +20,8 @@ Table of Contents
   - [Webcam functionality](#webcam-functionality-testing)
   - [PCB functionality testing](#pcb-functionality-testing)
 7. [Scanning QR Codes](#scanning-qr-codes)
+  - [Installing zbar](#now-we-install-the-zbar-library-to-scan-qr-codes-follow-these-step-below)
+  - [Core Programs](#i-used-the-follwing-code-to-scan-qr-codes-to-implement-the-qr-code-scanner)
 8. [Production Testing](#production-testing)
 9. [Conclusion](#conclusion)
 
@@ -150,7 +152,7 @@ To test the PCB, run the the traffic2B.c (source code available **-->** [here](/
 2. Compile the file using **gcc -Wall -o traffic2B traffic2B.c -lwiringPi** (this creates an execuatalbe object called traffic2B)
 3. Run the file using **sudo ./traffic2B**
 
-This should start blinking the L.E.D's in a traffic light pattern for an endless loop. Use Ctrl+C to exit the program. If this works, this means the PCB is ready to be used.
+This should start blinking the L.E.D's in a traffic light pattern for an endless loop. Use **Ctrl+C** to exit the program. If this works, this means the PCB is ready to be used.
 
 You are now ready to add the code to implement the QR Code scanning.
 
@@ -171,7 +173,7 @@ Congratulations! You've just implemented a QR Code scanner. Hurray!.
 Nope. You're still not done yet. You need to add the caplibity to blink the L.E.D as well as save the results into a file for external use (ex: storing information into a database). Keep reading to find out how you add these.
 
 #### I used the follwing code to Scan QR Codes to implement the QR code scanner
-| Main Shell Script | Python Blink | greenLight.c |
+| Shell Script | Python Blink | greenLight.c |
 |---|---|---|
 |[scanqr.sh](/Build Log Files/scanqr.sh)|[alertLight.py](/Build Log Files/alertLight.py)|[greenLight.c](/Build Log Files/greenLight.c)
 
@@ -193,7 +195,15 @@ Moerver you can also change the number of cyles for how many times this led on/o
 for i in range(0,11):
 ```
 
-When it's all done you test run this program by typing **python alert.py** on the terminal. The L.E.D. should display according to your modifications.
+When it's all done you test run this program by typing **python alert.py** on the terminal. The L.E.D. should display according to your modifications. 
+
+The C file *greenLight.c* is just there to initiate the green light for use during the scanning process. It just blinks the led in green for 1/10th of the second. I recommend leaving it as is.
+
+The Shell Script file *scanqr.sh* is where the bulk of the program lies. It starts off by compiling and executing *greenLight.c*. Then it defines a few variables for storing information. Every session of script execution produces a file called "scan" followed by a timestamp and the .txt extention. You can change the filename by editing the variable $ScanResult.
+
+```bash
+ScanResult="$cwd/scan_$DATE.txt"
+```
 
 
 
