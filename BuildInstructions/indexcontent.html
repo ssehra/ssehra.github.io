@@ -2,7 +2,7 @@
 <HEADER ID="Header_Article_1"><H1>Protorype Lab Flow: Build Instructions</H1></HEADER>
 
 <SECTION ID="Title">
-<h1><a id="Prototype_Lab_Flow_0"></a>Prototype Lab Flow</h1>
+<h3><a id="Prototype_Lab_Flow_0"></a>Prototype Lab Flow</h3>
 <p>Projects blog: <a href="http://ssehra.github.io/">http://ssehra.github.io</a></p>
 <p https://ssehra.github.io/BuildInstructions/index.html>
 </SECTION>
@@ -10,7 +10,7 @@
 
 	
 <SECTION ID="Introduction">
-<h1>Introduction</h1>
+<h3>Introduction</h3>
 <p>This document will provide you with all the necessary information required to build your very own “Prototype Lab Flow” project.</p>
 <h4><a id="What_is_the_Protoype_Lab_Flow_project_32"></a><em>What is the Protoype Lab Flow project?</em></h4>
 <p>Well in simple terms, this project is a realtime database that allows the user to add/remove items into the database by simply scanning QR Codes.</p>
@@ -24,7 +24,7 @@
 	
 	
 <SECTION ID="Build_Budget">
-<h1>Build Budget</h1>
+<h3>Build Budget</h3>
 <p>Before we start building something, we need to plan a budget. A budget will be especially helpful in managing the financial costs related to our build.</p>
 <h4><a id="Heres_a_breakdown_of_the_item_needed_to_build_this_project_49"></a>Here’s a breakdown of the item needed to build this project.</h4>
 <ol>
@@ -95,7 +95,7 @@
 	
 	
 <SECTION ID="Time_Commitment">
-<h1>Time Commitment</h1>
+<h3>Time Commitment</h3>
 <p>Time is a resource arguably as valuable as money. And this project demands plenty of it.</p>
 <p>I had almost 15 weeks to work this project however with these detailed instructions I will be cutting that time significantly for anyone wanting to recreate this project. Majority of my time was spent in implementing the QR scanning functionality and blinking the L.E.D. for feedback. It was my first time soldering and I was able to solder the PCB in less than an hour.</p>
 <p>If you already have acquired all the parts and got the PCB printed, I beleive this project can be completed in a day. That’s if you copy paste the all the code and it runs flawlessly without any errors.</p>
@@ -104,7 +104,7 @@
 	
 	
 <SECTION ID="PCB_Soldering">
-<h1>PCB Soldering</h1>
+<h3>PCB Soldering</h3>
 <p>Time to start building the PCB! However you build something, you must design it first. That’s where these files come in handy. Go ahead and download these files.</p>
 <table class="table table-striped table-bordered">
 <thead>
@@ -156,7 +156,7 @@
 	
 	
 <SECTION ID="Mechanical_Assembly_Power_Up">
-<h1>Mechanical Assembly &amp; Power Up</h1>
+<h3>Mechanical Assembly &amp; Power Up</h3>
 <p>By now, you have acquired all the parts you are ready to start doing mechanical assembly. It’s extremely easy from here onwards since this guide a shortchut to the finishline.</p>
 <p>You should now have the following: a Raspberry Pi, a USB Webcam, a MicroUSB power source and A MicroSD Card (8GB or higher). The starter kit’s MicroSD card comes with pre-loaded Raspbian.iso so all you have to do is install it. If it doens’t then it can downloaded from the Raspberry Pi website and copied on the MicroSD via a card reader (also included in the starter kit). Insert the flash card into Raspberry Pi.</p>
 <p>Begin by connecting power, HDMI and a keyboard and mouse and the USB Webcam to the Raspberry Pi. Also connect your PCB to  the Raspberry Pi. After it boots to the desktop, use <strong>sudo apt-get update</strong> on the commandline terminal to update the Raspbian to the latest version. Then use <strong>sudo apt-get dist-upgrade</strong> to upgrade all the installed packages. These commands require internet (ethernet or wifi) to download the updates.</p>
@@ -166,7 +166,7 @@
 	
 	
 <SECTION ID="Unit_Testing">
-<h1>Unit Testing</h1>
+<h3>Unit Testing</h3>
 <h4><a id="Webcam_functionality_testing_144"></a>Webcam functionality testing</h4>
 <p>For testing, start by installing the fswebcam library by typing <strong>sudo apt-get install fswebcam</strong>. Then type fswebcam followed by a filename with .jpg extention. For example, <strong>fswebcam image.jpg</strong>. This will snap a picture and save it the current directory with the filename image.jpg. If this works, that means the USB Webcam functions properly.</p>
 <h4><a id="PCB_functionality_testing_147"></a>PCB functionality testing</h4>
@@ -182,7 +182,7 @@
 	
 	
 <SECTION ID="Scanning_QR_Codes">
-<h1>Scanning QR Codes</h1>
+<h3>Scanning QR Codes</h3>
 <p>You can generate your own QR Codes —&gt; <a href="http://www.qr-code-generator.com/">here</a>, or any other website of your choosing. If you are using a service thats allows you to set the pixel count of the QR code, I recommend setting it to the minimum as it’s faster and can be handled by webcams with lower resolution.</p>
 <h4><a id="Now_we_install_the_zbar_library_to_scan_QR_codes_Follow_these_step_below_163"></a>Now we install the zbar library to scan QR codes. Follow these step below:</h4>
 <ol>
@@ -250,7 +250,7 @@ ScanResult=<span class="hljs-string">"<span class="hljs-variable">$cwd</span>/sc
 </SECTION>
 	
 <SECTION ID="Ending_Notes">
-<h1>Ending Notes</h1>
+<h3>Ending Notes</h3>
 <p>I hope you found this guide helpful and were able to reproduce your very own Protoype Lab Flow project.  With everything functioning as it should and costing you a total of hopefully less than $300. Here’s a sample output of the program.</p>
 </SECTION>
 </ARTICLE>
