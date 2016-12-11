@@ -1,0 +1,155 @@
+<ARTICLE ID="Article_1">
+	<HEADER ID="Header_Article_1">
+		<H2>Protorype Lab Flow - Build Instructions</H2>
+ 	</HEADER>
+	
+	<SECTION ID="Introduction">
+		<H3>Introduction</H3>
+		<p>This build instruction will show how to build the “Prototype Lab Flow” project which consists of a webcam, 
+			raspberry pi and a PCB. This project was designed by myself, Mathues Rondinille and Sukhdeep Sehra. 
+			The purposes of this project make the flow of the prototype lab more efficient to take out items from 
+			the lab and store them in a database by using a QR code. I will show step by step how the project is made.</p>
+	</SECTION>
+	
+	<SECTION ID="System_Diagram">
+		<H3>System Diagram</H3>
+		  <img src="../BuildLogFiles/sysem diagram.PNG" alt="System Diagram" style="width:900px;height:350px;">
+	</SECTION>
+	
+	<SECTION ID="Build_Material">
+		<H3>Build Materials/Budget</H3>
+		<p>The materials I’ve used for this project are webcam, raspberry pi, QR codes and PCB. The PCB is not required to do 
+			this project; I just used it for the LED for light indicator when the QR code has been scanned. The PCB was 
+			provided by the school. The raspberry pi needs a mouse, keyboard and a monitor. My project is not expensive,
+			here’s a table that shows how much I spent:</p>
+		<table>
+			<tr>
+				<th>Item</th>
+				<th>Quantity</th>
+				<th>Total Price(With Tax)</th>
+			</tr>
+			<tr>
+				<td>Raspberry Pi 3</td>
+				<td>1</td>
+				<td>$101.69</td>
+			</tr>			
+			<tr>
+				<td>Logitech - Webcam</td>				<td>1</td>
+				<td>$34.69</td>
+			</tr>
+		</table>
+	</SECTION>
+	
+	<SECTION ID="Time_Commiment">
+		<H3>Time Commitment</H3>
+		<p>The project took 15 weeks in total but with the instructions that I will be providing will decrease the time required
+			needed. Most of the time I spent researching and trying to make the code compatible with the hardware. Below is 
+			the breakdown how much time I spent:
+		</p>
+		<table>
+			<tr>
+				<th>Task</th>
+				<th>Time Required</th>
+			</tr>
+			<tr>
+				<td>Ordering Parts</td>
+				<td>2 Hours</td>
+			</tr>			
+			<tr>
+				<td>Raspberry Pi 3 Setup</td>				
+				<td>2 Hours</td>
+			</tr>
+			<tr>
+				<td>Soldering PCB</td>				
+				<td>2 Hours</td>
+			</tr>
+			<tr>
+				<td>Testing PCB</td>				
+				<td>30 Minutes</td>
+			</tr>
+			<tr>
+				<td>Coding</td>				
+				<td>7 Hours</td>
+			</tr>
+			<tr>
+				<td>Remote Desktop</td>				
+				<td>30 Minutes</td>
+			</tr>
+			<tr>
+				<td>Mechanical Assembly </td>				
+				<td>30 Minutes</td>
+			</tr>
+		</table>
+		
+	</SECTION>
+	
+	<SECTION ID="Mechanical_Assembly">
+		<H3>Mechanical Assembly</H3>
+		<p>The assembly for my project is very simple. First connect the components needed for the raspberry pi which is a 
+			mouse, keyboard and a monitor. Then connect the webcam into USB port on the raspberry pi and after connect the 
+			PCB on top of the raspberry pi for LED indicator. Lastly connect the power outlet of the raspberry pi.</p>
+	</SECTION>
+	
+	<SECTION ID="PI_Setup">
+		<H3>Raspberry pi Set-up</H3>
+		<p>
+		<li>Sudo apt-get install zbar- tools (This is needed to scan a QR code)</li>
+		<li>Sudo apt-get update (Run this command if above command didn’t install properly)</li>
+		<li>ls /dev/video* (This command check which video input is your webcam is connected to)</li>
+		<li>zbarcam /dev/video* (The * needs to be change to the video input of your webcam is connected to.) </li>
+		</p>
+	</SECTION>
+	
+	<SECTION ID="PCB_Soldering">
+		<H3>PCB Soldering</H3>
+		<p>The PCB called Modular Sensor Hat was provided by Humber College. The board must be printed at the prototype lab
+			first. Soldering the PCB was very simple because of the schematic provided to us.  Before soldering make sure 
+			wear your safety glasses.
+			
+			 <img src="../BuildLogFiles/PCB.jpg" alt="PCB" style="width:700px;height:600px;">
+			<img src="../BuildLogFiles/schematic.png" alt="schematic" style="width:700px;height:600px;">
+		</p>
+	</SECTION>
+	
+	<SECTION ID="Power_Up">
+		<H3>Power Up</H3>
+		<p>Once you follow the steps above you can now power up the project. After the raspberry pi is turned on, go to terminal
+			and run the command ./scanner.sh I will be providing a download link below for all the codes used for this project. 
+			Once you run the code, zbarcam will pop out in a new window where you can see the webcam input and you can start 
+			scanning QR codes. When a QR code gets scanned the LED from PCB will blink and the data from QR code will be saved 
+			in a file called “scan-reults.txt”.</p>	
+	</SECTION>
+	
+	<SECTION ID="Unit_Testing">
+		<H3>Unit Testing</H3>
+		<p>First we checked if the LED in the PCB works by running sudo ./traffic2B command in the raspberry pi terminal. The 
+			traffic2B was provided by Humber College. Next we checked if the webcam is compatible with the raspberry pi by
+			installing FSWEBCAM. To install FSWEBCAM type sudo apt-get install fswebcam and upon installing type fswebcam 
+			image.jpg to run the webcam. If the webcam works it will take a picture and it will get save.</p>	
+	</SECTION>
+	
+	<SECTION ID="Product_Testing">
+		<H3>Product Testing</H3>
+		<p>To test the project, power up the raspberry pi and after the raspberry pi is turned on go to terminal and type 
+			“./scanner.sh” a download link below will be provided. After running the script place a QR code in front of the
+			webcam and when the QR code gets scanned successfully the LED from PCB will blink and the data will be saved to 
+			a file txt called “scan-results.txt”.</p>	
+	</SECTION>
+	
+	<SECTION ID="Reproducibility">
+		<H3>Reproducibility</H3>
+		<p>My project can be replicate by following the instructions I provided above.</p>	
+	</SECTION>
+	
+	<SECTION ID="Downloads">
+		<H3>Downloads</H3>
+		<p>
+		<a href="../BuildLogFiles/scanner.sh" download="scanner.sh">Download - scanner.sh</a><br>
+		<a href="../BuildLogFiles/LED.py" download="LED.py">Download - LED.py</a><br>
+		<a href="../BuildLogFiles/HSHV4-student version.brd" download="HSHV4-student version.brd">Download - Modular Sensor Hat (Board File)</a><br>
+		<a href="../BuildLogFiles/HSHV4-student version.sch" download="HSHV4-student version.sch">Download -  Modular Sensor Hat (Schematic File)</a>
+		</p>
+	</SECTION>
+	
+	
+</ARTICLE>
