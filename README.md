@@ -201,8 +201,15 @@ The C file *greenLight.c* is just there to initiate the green light for use duri
 
 The Shell Script file *scanqr.sh* is where the bulk of the program lies. It starts off by compiling and executing *greenLight.c*. Then it defines a few variables for storing information. Every session of script execution produces a file called "scan" followed by a timestamp and the .txt extention. You can change the filename by editing the variable $ScanResult.
 
-```shell script
+```bash
+# Formatting date 
+DATE=$(date +"%y_%b_%d_%T")
+
+# Name of scan results file
 ScanResult="$cwd/scan_$DATE.txt"
+
+function scan() {
+  zbarcam --raw --prescale=320x240 /dev/video0 > $tmp &
 ```
 
 
