@@ -189,7 +189,7 @@ def blink(pin):
         return
 ```
 
-Moerver you can also change the number of cyles for how many times this led on/off will be repeated. Simply change the loop count by changing 11 to any value you desire.
+Moreover you can also change the number of cyles for how many times this led on/off will be repeated. Simply change the loop count by changing 11 to any value you desire.
 ```python
 for i in range(0,11):
 ```
