@@ -190,7 +190,6 @@ def blink(pin):
 ```
 
 Moerver you can also change the number of cyles for how many times this led on/off will be repeated. Simply change the loop count by changing 11 to any value you desire.
-
 ```python
 for i in range(0,11):
 ```
@@ -199,18 +198,20 @@ When it's all done you test run this program by typing **python alert.py** on th
 
 The C file *greenLight.c* is just there to initiate the green light for use during the scanning process. It just blinks the led in green for 1/10th of the second. I recommend leaving it as is.
 
-The Shell Script file *scanqr.sh* is where the bulk of the program lies. It starts off by compiling and executing *greenLight.c*. Then it defines a few variables for storing information. Every session of script execution produces a file called "scan" followed by a timestamp and the .txt extention. You can change the filename by editing the variable $ScanResult.
-
+The Shell Script file *scanqr.sh* is where the bulk of the program lies. It starts off by compiling and executing *greenLight.c*. Then it defines a few variables for storing information. Every session of script execution produces a file called "scan" followed by a timestamp and the .txt extention. You can change the output filename by editing the variable $ScanResult.
 ```bash
-# Formatting date 
-DATE=$(date +"%y_%b_%d_%T")
-
 # Name of scan results file
 ScanResult="$cwd/scan_$DATE.txt"
+```
 
+The fuction *scan()* initiates zbarcam to scan QR codes and then kills the task after saving the output. It even asks the user to scan multiple entires. Since it's using zbarcam you apply modifications by using flags like *--prescale* to set the resolution of the scanning resolution. Moreinforation
+```bash
 function scan() {
   zbarcam --raw --prescale=320x240 /dev/video0 > $tmp &
+  ...
 ```
+More inforation about the flags and their usages can be found --> [here](http://manpages.ubuntu.com/manpages/xenial/man1/zbarcam.1.html).
+
 
 
 
