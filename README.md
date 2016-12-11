@@ -219,9 +219,9 @@ function scan() {
 More inforation about the flags and their usages can be found --> [here](http://manpages.ubuntu.com/manpages/xenial/man1/zbarcam.1.html).
 
 #### To run the final code follow these steps:
-1.) Make sure all three core files: *greenLight.c*, *alertLight.py* and *scanqr.sh* are in the same directory.
-2.) On the terminal, use **chmod 777** followed by the filenames and grant all Read-Write-Execute permissions to the core files.
-3.) Type **./scanqr.sh** to execute the shell script.
+1. Make sure all three core files: *greenLight.c*, *alertLight.py* and *scanqr.sh* are in the same directory.
+2. On the terminal, use **chmod 777** followed by the filenames and grant all Read-Write-Execute permissions to the core files.
+3. Type **./scanqr.sh** to execute the shell script.
 
 You should now have the program working. The program scans QR code and then blinks the L.E.D. as well showing the scanned item on the screen. After scanning an item it prompts to scan another. If you choose yes, it scans another item and prompts to scan more items. If you choose no, then the program exits and shows the list of items scanned during the session. According to my code, every session generates a new file with a timestamp. You can use one file and reuse if you want. Futhermore, you can press **Ctrl+C** anytime to exit the program.
 
