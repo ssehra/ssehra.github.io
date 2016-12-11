@@ -229,4 +229,4 @@ Congratulations! You've just implemented the full QR Code scanner program. Hurra
 
 Ending Notes
 ============
-I hope you found this guide helpful and were able to reproduce your very own Protoype Lab Flow project.  With everything working and costing you a total of hopefully less than $300. 
+I hope you found this guide helpful and were able to reproduce your very own Protoype Lab Flow project.  With everything functioning as it should and costing you a total of hopefully less than $300. Here's a sample output of the program.
