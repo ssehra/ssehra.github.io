@@ -6,7 +6,9 @@ Projects blog: http://ssehra.github.io
 Table of Contents
 =================
 1. [Introduction](#introduction)
-      [What is the Project?](#what-is-the-protoype-lab-flow-project)
+  - [What is the Project?](#what-is-the-protoype-lab-flow-project)
+  + [Why is is useful?](#why-is-is-useful)
+  * [Why is is useful?](#why-is-is-useful)
   - [Why is is useful?](#why-is-is-useful)
 2. [Build Budget](#build-budget)
   - [Core items needed for the this project](#heres-a-breakdown-of-the-item-needed-to-build-this-project)
